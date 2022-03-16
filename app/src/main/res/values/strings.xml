@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!--   btn-->
+    <!--   btn-->
     <string name="btnZero">0</string>
     <string name="btnOne">1</string>
     <string name="btnTwo">2</string>

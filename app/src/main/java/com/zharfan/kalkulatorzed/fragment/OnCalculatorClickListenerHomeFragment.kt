@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.zharfan.kalkulatorzed.R
 import com.zharfan.kalkulatorzed.databinding.FragmentCalculatorHomeBinding
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -30,13 +32,19 @@ class OnCalculatorClickListenerHomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setActionClickListener()
+        setAction()
+    }
+
+    private fun setAction() {
+        binding.apply {
+            btnHistory.setOnClickListener {
+                it.findNavController().navigate(R.id.action_onCalculatorClickListenerHomeFragment_to_historyFragment)
+            }
+        }
     }
 
     private fun setActionClickListener() {
         binding.apply {
-            btnHistory.setOnClickListener {
-
-            }
 
             btnDelete.setOnClickListener {
                 val resultAfterDel: String = tvCalculation.text.toString()

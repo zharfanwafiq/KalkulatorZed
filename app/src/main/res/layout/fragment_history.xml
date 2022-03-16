@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activity.MainActivity">
+    tools:context=".fragment.HistoryFragment">
 
-    <fragment
-        android:id="@+id/frameContainer"
+    <TextView
+        android:id="@+id/tvHistory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/main_navigation"/>
+        android:text="@string/btnHistory"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
