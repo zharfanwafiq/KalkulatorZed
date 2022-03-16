@@ -2,10 +2,9 @@ package com.zharfan.kalkulatorzed.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.zharfan.kalkulatorzed.R
 import com.zharfan.kalkulatorzed.databinding.ActivityMainBinding
-import com.zharfan.kalkulatorzed.fragment.CalculatorHomeFragment
+import com.zharfan.kalkulatorzed.fragment.OnCalculatorClickListenerHomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,13 +20,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun showHomeFragment() {
         val mFragmentManager = supportFragmentManager
-        val mHomeFragment = CalculatorHomeFragment()
-        val fragment = mFragmentManager.findFragmentByTag(CalculatorHomeFragment::class.java.simpleName)
+        val mHomeFragment = OnCalculatorClickListenerHomeFragment()
+        val fragment = mFragmentManager.findFragmentByTag(OnCalculatorClickListenerHomeFragment::class.java.simpleName)
 
-
-        if (fragment !is  CalculatorHomeFragment){
+        if (fragment !is  OnCalculatorClickListenerHomeFragment){
             mFragmentManager.beginTransaction()
-                .add(R.id.frameContainer,mHomeFragment,CalculatorHomeFragment::class.java.simpleName)
+                .add(R.id.frameContainer,mHomeFragment,OnCalculatorClickListenerHomeFragment::class.java.simpleName)
                 .commit()
         }
     }
